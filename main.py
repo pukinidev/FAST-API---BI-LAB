@@ -8,7 +8,6 @@ from typing import List
 
 app = FastAPI()
 
-
 @app.post("/predict")
 def make_predictions(data_models: List[DataModel]):
     data_list = [data_model.model_dump() for data_model in data_models]
