@@ -4,7 +4,11 @@ url_train_data = 'https://github.com/pukinidev/LabsBIData/blob/main/Lab1/202420_
 
 data_original = pd.read_csv(url_train_data, sep=',', encoding='UTF-8')
 
-data_as_json = data_original.to_dict(orient='list')
-
 json_file_path = 'assets/data.json'
 data_original.to_json(json_file_path, orient='records')
+
+data_half = data_original.iloc[:len(data_original) // 2]
+
+json_half_file_path = 'assets/data_half.json'
+data_half.to_json(json_half_file_path, orient='records')
+
