@@ -39,3 +39,7 @@ def retrain_predict(data_models: List[DataModel]):
          "r2_score": r2_score(y, result)
     }
     return result_dict
+
+if __name__ == '__main__':
+    import uvicorn
+    uvicorn.run(app)
