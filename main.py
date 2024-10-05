@@ -1,4 +1,3 @@
-from typing import Optional
 import pandas as pd
 from fastapi import FastAPI
 from DataModel import DataModel
