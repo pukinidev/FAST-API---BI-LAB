@@ -20,7 +20,6 @@ def make_predictions(data_models: List[DataModel]):
     result_list = result.tolist()
     return result_list
 
-
 @app.post("/retrain_predict")
 def retrain_predict(data_models: List[DataModel]):
     data_list = [data_model.model_dump() for data_model in data_models]
